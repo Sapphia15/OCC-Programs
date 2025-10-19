@@ -13,6 +13,7 @@ function run()
         if #sig>5 and sig[1]=="modem_message" then
             if sig[6]=="broken" then
                 iv(drone,"use")
+                computer.beep(100,1)
             end
         end
     end
