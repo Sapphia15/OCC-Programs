@@ -21,7 +21,10 @@ while true do
         computer.beep(400,.5)
         computer.shutdown(true)
     elseif sig[6]=="run" then
-        run()
+        local status, err=pcall(run)
+        if not status then
+          iv(wnc,"broadcast",404,err)
+        end
     end
   end
 end

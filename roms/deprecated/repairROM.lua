@@ -1,3 +1,4 @@
+--it doesn't seem like a drone can use duct tape sadly... wrenches also don't seem to work. Anyway, this doesn't work.
 function iv(a,m,...) return component.invoke(a,m,...) end
 function gc(c) return component.list(c)() end
 local wnc=gc("modem")
@@ -11,10 +12,13 @@ function run()
     while true do
         local sig={computer.pullSignal(1)}
         if #sig>5 and sig[1]=="modem_message" then
-            if sig[6]=="broken" then
-                iv(drone,"use",nil,true)
-                computer.beep(100,1)
+            for i=0,5 do
+                if sig[6]=="broken" then
+                    iv(drone,"use",i,true)
+                    computer.beep(200,.1)
+                end
             end
+            computer.beep(100,1)
         end
     end
 end
