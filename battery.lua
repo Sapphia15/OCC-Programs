@@ -33,7 +33,7 @@ end
 
 if (#args==0) then
     display()
-elseif (args[1]=="monitor" or args[1]="m") then
+elseif (args[1]=="monitor" or args[1]=="m") then
     while (true) do
         term.clear()
         display()
