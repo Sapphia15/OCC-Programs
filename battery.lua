@@ -13,6 +13,7 @@ bar=bar.."\27[31m"
 for i=1,(20-bl) do
     bar=bar.."░"
 end
+local col="\27[32m"
 if (pcnt>10 and pcnt<50) then
     col="\27[33m"
 elseif (pcnt<11) then
@@ -21,6 +22,5 @@ end
 bar=bar.."\27[0m] "..col..pcnt.."%\n"
 max=math.floor(max*25)/10
 cur=math.floor(cur*25)/10
-local col="\27[32m"
 io.write(bar)
 io.write(col..cur.." / "..max.."EU\n")
