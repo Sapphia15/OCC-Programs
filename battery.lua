@@ -1,17 +1,19 @@
 local computer=require("computer")
 
-local max=computer.maxEnergy()*2.5
-local cur=computer.energy()*2.5
+local max=computer.maxEnergy()
+local cur=computer.energy()
 
 local pcnt=math.floor(cur*100/max)
-local bl=math.floor(pcnt/10)
+local bl=math.floor(pcnt/5)
 local bar="["
 for i=1,bl do
     bar=bar.."▓"
 end
-for i=1,(10-bl) do
+for i=1,(20-bl) do
     bar=bar.."░"
 end
 bar=bar.."] "..pcnt.."%"
+max=math.floor(max*25)/10
+cur=math.floor(max*25)/10
 print(bar)
 print(cur.." / "..max.."EU")
