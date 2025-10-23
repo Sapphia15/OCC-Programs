@@ -5,7 +5,7 @@ local cur=computer.energy()
 
 local pcnt=math.floor(cur*100/max)
 local bl=math.floor(pcnt/5)
-local bar="["
+local bar="["..(0x1b).."[0;32m"
 for i=1,bl do
     bar=bar.."▓"
 end
