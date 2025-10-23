@@ -12,8 +12,8 @@ end
 for i=1,(20-bl) do
     bar=bar.."░"
 end
-bar=bar.."] "..pcnt.."%"
+bar=bar.."] "..pcnt.."%\n"
 max=math.floor(max*25)/10
 cur=math.floor(cur*25)/10
-print(bar)
+io.write(bar)
 print(cur.." / "..max.."EU")
