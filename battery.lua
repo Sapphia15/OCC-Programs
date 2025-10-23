@@ -14,6 +14,6 @@ for i=1,(20-bl) do
 end
 bar=bar.."] "..pcnt.."%"
 max=math.floor(max*25)/10
-cur=math.floor(max*25)/10
+cur=math.floor(cur*25)/10
 print(bar)
 print(cur.." / "..max.."EU")
